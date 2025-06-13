@@ -1,0 +1,59 @@
+I'm building a web app called "SmartRecommend" using React and TailwindCSS. It is a ChatGPT-style AI assistant that helps users with credit cards, travel, hotels, and shopping. The home UI is clean, light-themed, and has a top navbar, a central chatbot area, and a fixed input bar at the bottom — like ChatGPT.
+
+I want the app to dynamically switch UI when a user selects a different module (Travel, Hotel, Shopping, or Default/Home).
+
+Please help me generate static XML mockups for each module to simulate the UI structure. Each mockup should:
+
+1. Preserve the same assistant layout (top bar, main panel, bottom prompt input).
+2. Render module-specific cards in the main panel.
+3. Mimic what the user would see when the assistant is responding in that module.
+
+Here are the module-specific mockups I want:
+
+---
+
+🔹 **Default (Home)**:
+- A welcome card that says:
+  "Hi there! 👋 I'm your Smart Lifestyle Assistant. I can help you find the perfect credit card, book flights, discover hotels, or find shopping deals. What would you like help with today?"
+- Below that, show 4 category suggestion chips:
+  - Credit card for travel
+  - Budget flights Mumbai-Delhi
+  - Hotels in Goa under ₹5000
+  - Electronics under ₹1000
+
+---
+
+🔹 **Travel Module**:
+- Title: "Top Flight Deals ✈️"
+- Cards:
+  - Flight from Mumbai to Delhi — ₹3,500 — 10% off on Axis Card
+  - Flight to Goa — ₹4,200 — Flat ₹500 off with HDFC
+  - Business class to Bangalore — ₹9,800 — 20% off on Amex
+
+---
+
+🔹 **Hotel Module**:
+- Title: "Recommended Hotels 🏨"
+- Cards:
+  - Lemon Tree, Goa — ₹4,800/night — Rating: 4.2 ⭐ — Free breakfast
+  - Taj Palace, Mumbai — ₹12,000/night — Rating: 4.9 ⭐ — 25% off with ICICI
+  - FabHotel Pune — ₹2,500/night — Budget pick
+
+---
+
+🔹 **Shopping Module**:
+- Title: "Top Deals for You 🛍️"
+- Cards:
+  - Noise Smartwatch — ₹1,999 — Amazon — 5% cashback on SBI
+  - JBL Earbuds — ₹2,699 — Flipkart — 10% off with Kotak
+  - Basic Electronics Combo — ₹899 — Deal of the Day
+
+---
+
+Each XML mockup should:
+- Use clear tags like `<ModuleView>`, `<Card>`, `<Title>`, `<Price>`, `<Offer>`, `<Platform>`, etc.
+- Be static (no JS, just mock structure)
+- Feel visually like a UI wireframe structure of what the user would see
+
+When I type:  
+"Show me Travel UI"  

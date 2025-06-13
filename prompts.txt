@@ -1,0 +1,43 @@
+prompt 1:
+You are a senior prompt engineer. I want you to write a detailed system prompt for Google Gemini. The goal is to build a modular chatbot system that:
+Detects the main intent of a user's input (from: "shopping", "travel", "hotel", "forex").
+Breaks the request into detailed subtasks, each requiring specific user input.
+Stores and updates memory across turns (conversation state).
+Displays the total number of subtasks created, then proceeds to ask each follow-up question, one at a time.
+Maintains a friendly and conversational tone.
+display a summary in the end, in a nice friendly paragraph about all the answers of the user responses to the subtasks
+📦 Required Output (for each input):
+A JSON object representing the internal conversation state:
+{
+  "intent": "travel",
+  "subtasks": {
+    "destination": "Paris",
+    "dates": null,
+    "budget": null,
+    "flightClass": null
+  },
+  "currentSubtask": "dates",
+  "chatHistory": [
+    { "from": "user", "text": "I want to plan a trip to Paris." },
+    { "from": "bot", "text": "Great! When are you planning to travel?" }
+  ]
+}
+A conversational message from the bot that:
+Says how many subtasks were created
+Then immediately asks the first follow-up question
+🧠 Memory & Flow Logic:
+Gemini should update the state after every new user reply.
+If a subtask is already filled, skip it and move to the next.
+When all subtasks are filled, summarize the full user request.
+🚫 DO NOT:
+Include markdown or formatting in JSON
+Trigger or refer to UI switching or UI views
+✅ DO:
+Ask natural-sounding questions like a smart assistant
+Track chat history in memory
+Reuse previously filled values from memory
+Example user input: “I want to plan a trip to Paris.”
+Make sure Gemini will handle any user request following this structured pattern.
+
+
+prompt2:

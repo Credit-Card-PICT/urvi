@@ -1,0 +1,47 @@
+{
+  "name": "DynamicUITrigger",
+  "description": "Detects intent from user input (flight, hotel, shopping) and opens corresponding dynamic UI. If multiple intents are present, opens based on order of appearance.",
+  "triggers": {
+    "flight": [
+      "flight", "flights", "airfare", "plane ticket", "cheap flights", "book flight", "fly", "airline", "airlines", 
+      "air travel", "jet", "round trip", "one way", "aviation", "layover", "international flight", 
+      "domestic flight", "economy class", "business class", "first class", "flight deal", "ticket booking", 
+      "airport", "departure", "arrival", "boarding", "luggage", "flight schedule", "air ticket", "airfare deals"
+    ],
+    "hotel": [
+      "hotel", "hotels", "accommodation", "book hotel", "stay", "lodging", "resort", "motel", "hostel", 
+      "bnb", "airbnb", "guest house", "room booking", "suite", "check-in", "check-out", "hotel deals", 
+      "luxury hotel", "budget hotel", "villa", "spa resort", "hotel reservation", "night stay", 
+      "room availability", "room service", "bed and breakfast"
+    ],
+    "shopping": [
+      "shopping", "shop", "ecommerce", "buy online", "discount", "sale", "purchase", "online store", 
+      "amazon", "flipkart", "myntra", "clothing", "gadgets", "electronics", "fashion", "order", 
+      "checkout", "cart", "wishlist", "retail", "apparel", "accessories", "shoes", "bags", "beauty", 
+      "cosmetics", "store", "shopping spree", "product", "item", "deal", "offer", "cashback", "promo code"
+    ]
+  },
+  "onPrompt": "Detect which keyword group appears first in the user prompt. Open the corresponding dynamic UI for that category. If no relevant keyword is found, remain on default UI. Priority is based on the order of appearance in user query, not group hierarchy.",
+  "examples": [
+    {
+      "input": "Looking to book a flight and maybe a hotel later",
+      "action": "Open Flight Dynamic UI"
+    },
+    {
+      "input": "I want a new phone and also looking for hotels in Goa",
+      "action": "Open Shopping Dynamic UI"
+    },
+    {
+      "input": "Planning a vacation with flight and hotel both",
+      "action": "Open Flight Dynamic UI"
+    },
+    {
+      "input": "Any spa resorts near Bali?",
+      "action": "Open Hotel Dynamic UI"
+    },
+    {
+      "input": "Need a cashback deal on a laptop",
+      "action": "Open Shopping Dynamic UI"
+    }
+  ]
+}
